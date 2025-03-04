@@ -1,10 +1,26 @@
 function romanNumber(num) {
-    const romanNumerals = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX'];
-    if (num >= 1 && num <= 9) {
-        return romanNumerals[num - 1];
-    } else {
+    if (num < 1 || num > 49) {
         return 'Invalid input';
     }
+
+    const romanNumerals = [
+        { value: 40, numeral: 'XL' },
+        { value: 10, numeral: 'X' },
+        { value: 9, numeral: 'IX' },
+        { value: 5, numeral: 'V' },
+        { value: 4, numeral: 'IV' },
+        { value: 1, numeral: 'I' }
+    ];
+
+    let result = '';
+    for (const { value, numeral } of romanNumerals) {
+        while (num >= value) {
+            result += numeral;
+            num -= value;
+        }
+    }
+
+    return result;
 }
 
 export default romanNumber;
