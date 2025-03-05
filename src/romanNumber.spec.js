@@ -51,6 +51,26 @@ describe('Roman Number Converter', () => {
     });
 
     test('converts 500 to D', () => {
-        expect(romanNumber(500)).toBe('Invalid input');
+        expect(romanNumber(500)).toBe('D');
+    });
+    
+    test('converts 670 to DCLXX', () => {
+        expect(romanNumber(670)).toBe('DCLXX');
+    });
+
+    test('converts 783 to DCCLXXXIII', () => {
+        expect(romanNumber(783)).toBe('DCCLXXXIII');
+    });
+
+    test('converts 900 to CM', () => {
+        expect(romanNumber(900)).toBe('CM');
+    });
+    
+    test('converts 999 to CMXCIX', () => {
+        expect(romanNumber(999)).toBe('CMXCIX');
+    });
+
+    test('converts 1000 to M', () => {
+        expect(romanNumber(1000)).toBe('Invalid input');
     });
 });
