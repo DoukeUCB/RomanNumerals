@@ -19,6 +19,18 @@ describe('Roman Number Converter', () => {
     });
 
     test('converts 50 to L', () => {
-        expect(romanNumber(50)).toBe('Invalid input');
+        expect(romanNumber(50)).toBe('L');
+    });
+
+    test('converts 79 to LXXIX', () => {
+        expect(romanNumber(79)).toBe('LXXIX');
+    });
+
+    test('converts 99 to XCIX', () => {
+        expect(romanNumber(99)).toBe('XCIX');
+    });
+
+    test('converts 100 to C', () => {
+        expect(romanNumber(100)).toBe('Invalid input');
     });
 });
