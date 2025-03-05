@@ -1,9 +1,11 @@
 function romanNumber(num) {
-    if (num < 1 || num > 399) {
+    if (num < 1 || num > 499) {
         return 'Invalid input';
     }
 
     const romanNumerals = [
+        { value: 500, numeral: 'D' },
+        { value: 400, numeral: 'CD' },
         { value: 100, numeral: 'C' },
         { value: 90, numeral: 'XC' },
         { value: 50, numeral: 'L' },

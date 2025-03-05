@@ -41,4 +41,16 @@ describe('Roman Number Converter', () => {
     test('converts 399 to CCCXCIX', () => {
         expect(romanNumber(399)).toBe('CCCXCIX');
     });
+
+    test('converts 400 to CD', () => {
+        expect(romanNumber(400)).toBe('CD');
+    });
+    
+    test('converts 499 to CDXCIX', () => {
+        expect(romanNumber(499)).toBe('CDXCIX');
+    });
+
+    test('converts 500 to D', () => {
+        expect(romanNumber(500)).toBe('Invalid input');
+    });
 });
