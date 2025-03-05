@@ -31,6 +31,14 @@ describe('Roman Number Converter', () => {
     });
 
     test('converts 100 to C', () => {
-        expect(romanNumber(100)).toBe('Invalid input');
+        expect(romanNumber(100)).toBe('C');
+    });
+
+    test('converts 299 to CCXCIX', () => {
+        expect(romanNumber(299)).toBe('CCXCIX');
+    });
+    
+    test('converts 399 to CCCXCIX', () => {
+        expect(romanNumber(399)).toBe('CCCXCIX');
     });
 });
